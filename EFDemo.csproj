@@ -76,6 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DepartmentDetails.aspx" />
     <Content Include="EmployeeModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EmployeeModel.edmx</DependentUpon>
@@ -91,6 +92,13 @@
   <ItemGroup>
     <Compile Include="Department.cs">
       <DependentUpon>EmployeeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentDetails.aspx.cs">
+      <DependentUpon>DepartmentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentDetails.aspx.designer.cs">
+      <DependentUpon>DepartmentDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>EmployeeModel.tt</DependentUpon>
