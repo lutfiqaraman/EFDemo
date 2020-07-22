@@ -90,6 +90,11 @@
       <DependentUpon>EmployeeModel.edmx</DependentUpon>
       <LastGenOutput>EmployeeModel.cs</LastGenOutput>
     </Content>
+    <Content Include="images\addnew.png" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\save.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

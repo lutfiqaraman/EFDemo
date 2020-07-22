@@ -16,6 +16,13 @@
                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                     <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                     <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
+
+                    <asp:TemplateField HeaderText="Operations">
+                        <FooterTemplate>
+                            <asp:HyperLink runat="server"></asp:HyperLink>
+                        </FooterTemplate>
+                    </asp:TemplateField>
+
                 </Columns>
 
                 <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
@@ -27,6 +34,9 @@
                 <SortedAscendingHeaderStyle BackColor="#4D0000" />
                 <SortedDescendingCellStyle BackColor="#FCF6C0" />
                 <SortedDescendingHeaderStyle BackColor="#820000" />
+
+                
+
             </asp:GridView>
         </div>
     </form>
