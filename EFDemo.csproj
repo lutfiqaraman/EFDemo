@@ -79,19 +79,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Department.aspx" />
     <Content Include="EmployeeModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EmployeeModel.Context.cs</LastGenOutput>
       <DependentUpon>EmployeeModel.edmx</DependentUpon>
+      <LastGenOutput>EmployeeModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="EmployeeModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EmployeeModel.cs</LastGenOutput>
       <DependentUpon>EmployeeModel.edmx</DependentUpon>
+      <LastGenOutput>EmployeeModel.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Department.aspx.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Department.aspx.designer.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Department.cs">
       <DependentUpon>EmployeeModel.tt</DependentUpon>
     </Compile>

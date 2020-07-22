@@ -13,10 +13,10 @@ namespace EFDemo
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EmployeeModelContainer : DbContext
+    public partial class EFDemoEntities : DbContext
     {
-        public EmployeeModelContainer()
-            : base("name=EmployeeModelContainer")
+        public EFDemoEntities()
+            : base("name=EFDemoEntities")
         {
         }
     
