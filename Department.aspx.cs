@@ -29,7 +29,7 @@ namespace EFDemo
 
         protected void gvDepartment_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-
+            int DeptID = Convert.ToInt32(gvDepartment.DataKeys[e.RowIndex].Value.ToString());
         }
     }
 }

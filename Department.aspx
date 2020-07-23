@@ -12,6 +12,7 @@
             <asp:GridView ID="gvDepartment" runat="server" AutoGenerateColumns="False" CellPadding="4" 
                 ForeColor="#333333" GridLines="None" 
                 ShowFooter = "True"
+                DataKeyNames="Id"
                 OnRowEditing = "gvDepartment_RowEditing"
                 OnRowDeleting="gvDepartment_RowDeleting">
 
