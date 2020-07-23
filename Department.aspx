@@ -9,13 +9,22 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="gvDepartment" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
-                <AlternatingRowStyle BackColor="White" />
+            <asp:GridView ID="gvDepartment" runat="server" AutoGenerateColumns="False" CellPadding="4" 
+                ForeColor="#333333" GridLines="None" 
+                ShowFooter="true">
+
+
                 
                 <Columns>
                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                     <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                     <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
+
+                    <asp:TemplateField HeaderText="Name of Department">
+                        <ItemTemplate>
+                            <asp:Label Text='<%= Eval("Name") %>' runat="server"></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Operations">
                         <FooterTemplate>
