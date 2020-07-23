@@ -21,5 +21,15 @@ namespace EFDemo
             gvDepartment.DataSource = db.Departments.ToList();
             gvDepartment.DataBind();
         }
+
+        protected void gvDepartment_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+
+        }
+
+        protected void gvDepartment_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
     }
 }
