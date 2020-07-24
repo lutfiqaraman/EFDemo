@@ -21,7 +21,7 @@
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
 
                 <Columns>
-                    <asp:TemplateField HeaderText="Name of Department">
+                    <asp:TemplateField HeaderText="Department">
                         <ItemTemplate>
                             <asp:Label runat="server" Text='<%# Eval("Name") %>'></asp:Label>
                         </ItemTemplate>
@@ -30,7 +30,7 @@
                         </EditItemTemplate>
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="Location of Department">
+                    <asp:TemplateField HeaderText="Location">
                         <ItemTemplate>
                             <asp:Label runat="server" Text='<%# Eval("Location") %>'></asp:Label>
                         </ItemTemplate>
@@ -39,7 +39,7 @@
                         </EditItemTemplate>
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="Operations">
+                    <asp:TemplateField>
                         <ItemTemplate>
                             <asp:ImageButton runat="server" ImageUrl="~/images/edit.png" CommandName="Edit" ToolTip="Edit" Width="20px" Height="20px" />
                             <asp:ImageButton runat="server" ImageUrl="~/images/delete.png" CommandName="Delete" ToolTip="Delete" Width="20px" Height="20px"  />
