@@ -45,7 +45,19 @@ namespace EFDemo
 
         protected void gvDepartment_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+            int depatmentID = Convert.ToInt32(gvDepartment.DataKeys[e.RowIndex].Value.ToString());
+            Department department = db.Departments.SingleOrDefault(d => d.ID == depatmentID);
 
+            if (department != null)
+            {
+                department.Name = (gvDepartment.Rows[e.RowIndex].FindControl("txtName") as TextBox).Text.Trim();
+                department.Location = (gvDepartment.Rows[e.RowIndex].FindControl("txtLocation") as TextBox).Text.Trim();
+
+                db.SaveChanges();
+            }
+
+            gvDepartment.EditIndex = -1;
+            GetDepartments();
         }
 
         protected void gvDepartment_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
