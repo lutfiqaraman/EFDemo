@@ -25,7 +25,8 @@ namespace EFDemo
 
         protected void gvDepartment_RowEditing(object sender, GridViewEditEventArgs e)
         {
-
+            gvDepartment.EditIndex = e.NewEditIndex;
+            GetDepartments();
         }
 
         protected void gvDepartment_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -39,6 +40,17 @@ namespace EFDemo
                 db.SaveChanges();
             }
 
+            GetDepartments();
+        }
+
+        protected void gvDepartment_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
+        }
+
+        protected void gvDepartment_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            gvDepartment.EditIndex = -1;
             GetDepartments();
         }
     }

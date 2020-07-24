@@ -14,21 +14,29 @@
                 ShowFooter = "True"
                 DataKeyNames="Id"
                 OnRowEditing = "gvDepartment_RowEditing"
-                OnRowDeleting="gvDepartment_RowDeleting">
+                OnRowDeleting="gvDepartment_RowDeleting"
+                OnRowUpdating="gvDepartment_RowUpdating"
+                OnRowCancelingEdit="gvDepartment_RowCancelingEdit">
 
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
 
                 <Columns>
                     <asp:TemplateField HeaderText="Name of Department">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("Name") %>' runat="server"></asp:Label>
+                            <asp:Label runat="server" Text='<%# Eval("Name") %>'></asp:Label>
                         </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox runat="server" ID="txtName" Text='<%# Eval("Name") %>'></asp:TextBox>
+                        </EditItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Location of Department">
                         <ItemTemplate>
-                            <asp:Label Text='<%# Eval("Location") %>' runat="server"></asp:Label>
+                            <asp:Label runat="server" Text='<%# Eval("Location") %>'></asp:Label>
                         </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox runat="server" ID="txtLocation" Text='<%# Eval("Location") %>'></asp:TextBox>
+                        </EditItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Operations">
@@ -36,6 +44,10 @@
                             <asp:ImageButton runat="server" ImageUrl="~/images/edit.png" CommandName="Edit" ToolTip="Edit" Width="20px" Height="20px" />
                             <asp:ImageButton runat="server" ImageUrl="~/images/delete.png" CommandName="Delete" ToolTip="Delete" Width="20px" Height="20px"  />
                         </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:ImageButton runat="server" ImageUrl="~/images/save.png" CommandName="Update" ToolTip="" Width="20px" Height="20px" />
+                            <asp:ImageButton runat="server" ImageUrl="~/images/cancel.png" CommandName="Cancel" ToolTip="Cancel" Width="20px" Height="20px" />
+                        </EditItemTemplate>
                     </asp:TemplateField>
 
                 </Columns>
