@@ -10,13 +10,14 @@ namespace EFDemo
     public partial class Department1 : System.Web.UI.Page
     {
         EFDemoEntities db = new EFDemoEntities();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-                FillDepartment();
+                GetDepartments();
         }
 
-        void FillDepartment()
+        void GetDepartments()
         {
             gvDepartment.DataSource = db.Departments.ToList();
             gvDepartment.DataBind();
@@ -29,7 +30,16 @@ namespace EFDemo
 
         protected void gvDepartment_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            int DeptID = Convert.ToInt32(gvDepartment.DataKeys[e.RowIndex].Value.ToString());
+            int depatmentID = Convert.ToInt32(gvDepartment.DataKeys[e.RowIndex].Value.ToString());
+            Department department = db.Departments.SingleOrDefault(d => d.ID == depatmentID);
+
+            if (department != null)
+            {
+                db.Departments.Remove(department);
+                db.SaveChanges();
+            }
+
+            GetDepartments();
         }
     }
 }
