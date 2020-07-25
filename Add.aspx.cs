@@ -29,6 +29,8 @@ namespace EFDemo
                 db.Departments.Add(department);
                 db.SaveChanges();
             }
+
+            Response.Redirect("Department.aspx");
         }
     }
 }
