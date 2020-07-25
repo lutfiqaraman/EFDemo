@@ -7,7 +7,10 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <div>
+        <a href="add.aspx">Add New Department</a>
+    </div>
+    <form id="formdepartment" runat="server">
         <div>
             <asp:GridView ID="gvDepartment" runat="server" AutoGenerateColumns="False" CellPadding="4" 
                 ForeColor="#333333" GridLines="None" 
