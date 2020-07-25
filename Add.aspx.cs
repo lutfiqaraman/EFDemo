@@ -13,5 +13,10 @@ namespace EFDemo
         {
 
         }
+
+        protected void btnSaveDepartment_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,7 +16,7 @@
             <input type="text" name="txtLocation" placeholder="Enter location of the department" />
         </div>
         <div>
-            <asp:Button Text="Save" runat="server" />
+            <asp:Button runat="server" ID="btnSaveDepartment" Text="save" OnClick="btnSaveDepartment_Click" />
         </div>
     </form>
 </body>
