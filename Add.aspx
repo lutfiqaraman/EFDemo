@@ -12,8 +12,8 @@
             <h1>Add New Department</h1>
         </div>
         <div>
-            <input type="text" name="txtName" placeholder="Enter name of the department"/>
-            <input type="text" name="txtLocation" placeholder="Enter location of the department" />
+            <asp:TextBox runat="server" ID="txtName"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtLocation"></asp:TextBox>
         </div>
         <div>
             <asp:Button runat="server" ID="btnSaveDepartment" Text="save" OnClick="btnSaveDepartment_Click" />
